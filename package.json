@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/rhythm191/emmet-online-editor#readme",
   "dependencies": {
+    "emmet": "^2.0.0-rc.9",
     "next": "9.2.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",

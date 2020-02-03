@@ -41,7 +41,7 @@ const Home: React.FC = () => {
           />
         </div>
         <div className="viewer">
-          <OutputViewer />
+          <OutputViewer text={source} />
         </div>
       </main>
 
