@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useRef, useCallback, ChangeEvent } from "react";
 import Head from "next/head";
-import InputForm from "../components/InputForm";
+// import InputForm from "../components/InputForm";
 import OutputViewer from "../components/OutputViewer";
 
-const Home = () => {
+const Home: React.FC = () => {
   const url = "https://emmet-online-editor";
+
+  const [source, setSource] = useState("");
+  const inputEl = useRef(null);
+
+  const handleSourceUpdate = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => setSource(e.target.value),
+    [source]
+  );
 
   return (
     <div className="app">
@@ -24,7 +32,13 @@ const Home = () => {
 
       <main>
         <div className="input-form">
-          <InputForm />
+          <input
+            type="text"
+            defaultValue={source}
+            onChange={handleSourceUpdate}
+            placeholder=".hoge>.fuga"
+            ref={inputEl}
+          />
         </div>
         <div className="viewer">
           <OutputViewer />
@@ -84,12 +98,11 @@ const Home = () => {
           width: 100%;
           text-align: center;
         }
-        .title {
-          margin: 0;
+        header > h1 {
+          margin: 10px 0 20px;
           width: 100%;
-          padding-top: 80px;
-          line-height: 1.15;
-          font-size: 48px;
+          font-size: 2rem;
+          line-height: 1.5;
         }
         main {
           width: 100%;
@@ -97,6 +110,15 @@ const Home = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
+          marign: 10px auto;
+        }
+        .input-form {
+          width: 100%;
+        }
+        .input-form > input {
+          width: 100%;
+          font-size: 1.2rem;
+          padding: 4px 4px;
         }
         .viewer {
           width: 100%;
