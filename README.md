@@ -1,6 +1,6 @@
 # Emmet Online Editor
 
-Sliding puzzle application to use twitter images.
+This app is Emmet Online Editor
 
 ## Development
 
