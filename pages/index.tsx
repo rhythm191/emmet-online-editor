@@ -1,6 +1,5 @@
 import React, { useState, useRef, useCallback, ChangeEvent } from "react";
 import Head from "next/head";
-// import InputForm from "../components/InputForm";
 import OutputViewer from "../components/OutputViewer";
 
 const Home: React.FC = () => {
@@ -32,11 +31,13 @@ const Home: React.FC = () => {
 
       <main>
         <div className="input-form">
+          <label htmlFor="input-form">Emmet Command</label>
           <input
+            id="input-form"
             type="text"
             defaultValue={source}
             onChange={handleSourceUpdate}
-            placeholder=".hoge>.fuga"
+            placeholder="Enter your command"
             ref={inputEl}
           />
         </div>
@@ -93,6 +94,7 @@ const Home: React.FC = () => {
           align-items: center;
           color: #333;
           margin: 0 auto;
+          font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         header {
           width: 100%;
@@ -104,21 +106,40 @@ const Home: React.FC = () => {
           font-size: 2rem;
           line-height: 1.5;
         }
+        @media (max-width: 576px) {
+          header > h1 {
+            font-size: 1.6rem;
+          }
+        }
         main {
           width: 100%;
           height: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
-          marign: 10px auto;
+          padding: 20px 0;
         }
         .input-form {
           width: 100%;
+          color: #000;
+        }
+        .input-form > label {
+          width: 100%;
+          margin: 0 0 6px 4px;
         }
         .input-form > input {
+          box-sizing: border-box;
           width: 100%;
           font-size: 1.2rem;
-          padding: 4px 4px;
+          margin-bottom: 8px;
+          padding: 6px 4px;
+          border: none;
+          border-bottom: 1px solid #ccc;
+        }
+        .input-form > input:focus {
+          outline: none;
+          border-bottom: 2px solid #548ee6;
+          margin-bottom: 7px;
         }
         .viewer {
           width: 100%;
@@ -128,7 +149,7 @@ const Home: React.FC = () => {
           display: flex;
           width: 100%;
           height: 40px;
-          padding: 10px 10px;
+          padding: 20px 10px;
           justify-content: space-between;
           align-item: center;
         }

@@ -55,19 +55,24 @@ const OutputViewer: React.FC<Props> = ({ text }) => {
           position: relative;
           width: 100%;
           height: 100%;
+          margin: 10px auto;
 
+          border: 1px solid #f5f5f5;
           border-radius: 5px;
         }
         .formatted-text {
+          margin: 0;
+          padding: 10px;
           color: #333;
           font-size: 1.2rem;
+          font-family: "Source Han Code JP", monospace, sans-serif;
         }
         .clipboard {
           position: absolute;
           top: 0;
           right: 4px;
           color: #9a9a9a;
-          background-color: #f7f7f7;
+          background: #f7f7f7;
           cursor: pointer;
         }
         .clipboard > svg {
