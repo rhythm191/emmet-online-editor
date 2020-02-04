@@ -3,7 +3,7 @@ import Head from "next/head";
 import OutputViewer from "../components/OutputViewer";
 
 const Home: React.FC = () => {
-  const url = "https://emmet-online-editor";
+  const url = "https://emmet-online-editor.netlify.com";
 
   const [source, setSource] = useState("");
   const inputEl = useRef(null);

@@ -2,6 +2,10 @@
 
 This app is Emmet Online Editor
 
+## App URL
+
+https://emmet-online-editor.netlify.com/
+
 ## Development
 
 
@@ -23,4 +27,6 @@ We suggest that you begin by typing:
 
 ### LICENSE
 
-MIT
+[MIT License](https://github.com/rhythm191/emmet-online-editor/blob/master/LICENSE)
+
+Copyright (c) [@rhythm191](https://twitter.com/rhythm191)
