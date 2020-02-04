@@ -73,10 +73,14 @@ const OutputViewer: React.FC<Props> = ({ text }) => {
           right: 4px;
           color: #9a9a9a;
           background: #f7f7f7;
+          border: 1px solid #9a9a9a;
+          border-radius: 5px;
           cursor: pointer;
         }
         .clipboard > svg {
-          display: inline;
+          display: block;
+          width: 24px;
+          height: 32px;
         }
         .clipboard > svg > path {
           fill: #9a9a9a;
