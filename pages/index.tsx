@@ -147,6 +147,7 @@ const Home: React.FC = () => {
           padding: 6px 4px;
           border: none;
           border-bottom: 1px solid #ccc;
+          border-radius: none;
         }
         .input-form > input:focus {
           outline: none;
