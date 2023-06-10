@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, ChangeEvent } from "react";
 import Head from "next/head";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 import OutputViewer from "../components/OutputViewer";
 
 const Home: React.FC = () => {
@@ -23,16 +24,9 @@ const Home: React.FC = () => {
         <meta property="og:description" content="'Emmet Online Editor' is online emmet executor" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNJ2KTJ1ZB"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-JNJ2KTJ1ZB');
-        </script>
+        <GoogleAnalytics />
       </Head>
-
+      
       <header>
         <h1>Emmet Online Editor</h1>
       </header>
