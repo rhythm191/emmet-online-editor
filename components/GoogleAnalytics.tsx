@@ -3,7 +3,7 @@ import React from "react";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
-const GoogleAnalytics = () => {
+const GoogleAnalytics: React.FC = () => {
   if (isDevelopment) return null;
 
   return (

@@ -24,8 +24,9 @@ const Home: React.FC = () => {
         <meta property="og:description" content="'Emmet Online Editor' is online emmet executor" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary" />
-        <GoogleAnalytics />
       </Head>
+
+      <GoogleAnalytics />
       
       <header>
         <h1>Emmet Online Editor</h1>
