@@ -23,18 +23,14 @@ const Home: React.FC = () => {
         <meta property="og:description" content="'Emmet Online Editor' is online emmet executor" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40723403-3"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNJ2KTJ1ZB"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-              gtag('config', 'UA-40723403-3');
-              `,
-          }}
-        ></script>
+          gtag('config', 'G-JNJ2KTJ1ZB');
+        </script>
       </Head>
 
       <header>
